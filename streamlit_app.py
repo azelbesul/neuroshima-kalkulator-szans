@@ -16,13 +16,13 @@ def get_effective_difficulty(difficulty_name, skill_level):
     levels = list(difficulty_levels.items())
 idx = [i for i, (name, _) in enumerate(levels) if name == difficulty_name][0]
 if skill_level >= 4:
-idx = max(0, idx - 1)
+    idx = max(0, idx - 1)
 return levels[idx][1]
 
 def check_if_success(rolls, attr, skill, modifier):
 ones = rolls.count(1)
 twenties = rolls.count(20)
-effective_mod = modifier + ones * 2 - twenties * 3
+effective_mod = modifier + ones * 2 - twenties * 
 target = attr + effective_mod
 
 auto_success = ones
