@@ -22,7 +22,7 @@ def get_effective_difficulty(difficulty_name, skill_level):
 def check_if_success(rolls, attr, skill, modifier):
     ones = rolls.count(1)
     twenties = rolls.count(20)
-    effective_mod = modifier + ones * 2 - twenties * 
+    effective_mod = modifier + ones * 2 - twenties * 3
     target = attr + effective_mod
 
     auto_success = ones
