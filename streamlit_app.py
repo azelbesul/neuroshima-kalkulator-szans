@@ -3,6 +3,8 @@ import itertools
 
 # Poziomy trudności z modyfikatorami
 difficulty_levels = {
+"Arcymistrzowski": -24
+"Mistrzowski": -20,
 "Fart": -15,
 "Cholernie Trudny": -11,
 "Bardzo Trudny": -8,
