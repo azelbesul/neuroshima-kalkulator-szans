@@ -13,7 +13,7 @@ difficulty_levels = {
 }
 
 def get_effective_difficulty(difficulty_name, skill_level):
-levels = list(difficulty_levels.items())
+    levels = list(difficulty_levels.items())
 idx = [i for i, (name, _) in enumerate(levels) if name == difficulty_name][0]
 if skill_level >= 4:
 idx = max(0, idx - 1)
@@ -31,17 +31,17 @@ remaining = [r for r in rolls if r != 1 and r != 20]
 
 # Prosty przypadek: nie trzeba rozdzielać punktów umiejętności
 if skill == 0:
-successes = sum(1 for r in remaining if r <= target)
+    successes = sum(1 for r in remaining if r <= target)
 return (successes + auto_success - auto_failure) >= 2
 
 # Próbujmy różnych rozdziałów punktów
 for combo in itertools.product(range(skill + 1), repeat=len(remaining)):
 if sum(combo) > skill:
 continue
-successes = auto_success
+    successes = auto_success
 for r, cost in zip(remaining, combo):
 if (r - cost) <= target:
-successes += 1
+    successes += 1
 if successes - auto_failure >= 2:
 return True
 return False
