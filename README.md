@@ -1,0 +1,1 @@
+# neuroshima-kalkulator-szans
